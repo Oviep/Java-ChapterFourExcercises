@@ -85,7 +85,11 @@ public class CreditLimitCalculator {
                 "Total items charged to customer account is: %d%nTotal credit to customer account: %d%nNew balnce on customer account is:", creditCalc.getAccountNumber(),
                 creditCalc.getBalanceAtBeginningOfMonth(), creditCalc.getTotalItemsCharged(), creditCalc.getTotalCreditToCustomerAccount(), creditCalc.calculateBalance());
 
-//        if()
+        if(creditCalc.calculateBalance() > allowedCreditlimit) {
+            System.out.println("Sorry, you do not have access to anymore credit on your customer acoount");
+        } else {
+            System.out.println("You are eligible for more credit on your shopping account");
+        }
 
 
 
